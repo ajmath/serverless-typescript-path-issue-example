@@ -1,0 +1,38 @@
+{
+  "name": "serverless-typescript-path-issue-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "offline": "sls offline start",
+    "build": "tsc --outDir .build",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^0.0.12",
+    "@types/jest": "^19.2.4",
+    "jest": "^20.0.4",
+    "serverless": "^1.15.3",
+    "serverless-offline": "^3.14.1",
+    "serverless-plugin-typescript": "^0.3.0",
+    "ts-jest": "^20.0.6",
+    "typescript": "^2.3.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "transform": {
+      ".ts": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/*.test.ts"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src",
+      "test"
+    ]
+  }
+}
